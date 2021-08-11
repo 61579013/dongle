@@ -4,7 +4,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/golang-module/openssl)](https://goreportcard.com/report/github.com/golang-module/dongle)
 [![codecov](https://codecov.io/gh/golang-module/openssl/branch/main/graph/badge.svg)](https://codecov.io/gh/golang-module/dongle)
 [![Go doc](https://img.shields.io/badge/go.dev-reference-brightgreen?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/github.com/golang-module/dongle)
-![License](https://img.shields.io/github/license/golang-module/dongle)
+![License](https://img.shields.io/github/license/golang-module/openssl)
 
 简体中文 | [English](README.md)
 
