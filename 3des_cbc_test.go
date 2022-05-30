@@ -12,9 +12,7 @@ var (
 	tripleDesCbcIV    = "12345678"
 
 	// 3DES-CBC-NoPadding
-	tripleDesCbcNoHexExpected = "3d7595a98bff809d3ea6f8aa28affd7f"
-	// tripleDesCbcNoHexExpected    = "3d7595a98bff809d3ea6f8aa28affd7f" // https://oktools.net/des
-	// tripleDesCbcNoHexExpected    = "3d7595a98bff809d3ea6f8aa28affd7f" // http://tool.chacuo.net/cryptdes
+	tripleDesCbcNoHexExpected    = "3d7595a98bff809d3ea6f8aa28affd7f"
 	tripleDesCbcNoBase32Expected = "HV2ZLKML76AJ2PVG7CVCRL75P4======"
 	tripleDesCbcNoBase64Expected = "PXWVqYv/gJ0+pviqKK/9fw=="
 

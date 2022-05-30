@@ -12,9 +12,7 @@ var (
 	tripleDesCtrIV    = "12345678"
 
 	// 3DES-CTR-NoPadding
-	tripleDesCtrNoHexExpected = "a7e231bc4de3bbb120618b70be119c63"
-	// tripleDesCtrNoHexExpected    = "a7e231bc4de3bbb120618b70be119c63" // https://oktools.net/des
-	// tripleDesCtrNoHexExpected    = "a7e231bc4de3bbb120618b70be119c63" // http://tool.chacuo.net/cryptdes
+	tripleDesCtrNoHexExpected    = "a7e231bc4de3bbb120618b70be119c63"
 	tripleDesCtrNoBase32Expected = "U7RDDPCN4O53CIDBRNYL4EM4MM======"
 	tripleDesCtrNoBase64Expected = "p+IxvE3ju7EgYYtwvhGcYw=="
 
