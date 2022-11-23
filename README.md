@@ -138,7 +138,6 @@ dongle.Decode.FromBytes([]byte("d3d3LmdvdWd1b3lpbi5jbg==")).ByBase64URL().ToByte
 ```
 
 ##### Encode and decode by base85
-
 ```go
 // Encode by base85 from string and output string
 dongle.Encode.FromString("hello world").ByBase85().ToString() // BOu!rD]j7BEbo7
@@ -152,7 +151,6 @@ dongle.Decode.FromBytes([]byte("BOu!rD]j7BEbo7")).ByBase85().ToBytes() // []byte
 ```
 
 ##### Encode and decode by base91
-
 ```go
 // Encode by base91 from string and output string
 dongle.Encode.FromString("hello world").ByBase91().ToString() // TPwJh>Io2Tv!lE
@@ -166,7 +164,6 @@ dongle.Decode.FromBytes([]byte("TPwJh>Io2Tv!lE")).ByBase91().ToBytes() // []byte
 ```
 
 ##### Encode and decode by base100
-
 ```go
 // Encode by base100 from string and output string
 dongle.Encode.FromString("hello world").ByBase100().ToString() // 👟👜👣👣👦🐗👮👦👩👣👛
@@ -180,7 +177,6 @@ dongle.Decode.FromBytes([]byte("👟👜👣👣👦🐗👮👦👩👣👛")).
 ```
 
 ##### Encode and decode by safeURL
-
 ```go
 // Encode by escape from url string and output string
 dongle.Encode.FromString("www.gouguoyin.cn?sex=男&age=18").BySafeURL().ToString() // www.gouguoyin.cn%3Fsex%3D%E7%94%B7%26age%3D18
@@ -574,7 +570,6 @@ dongle.Decrypt.FromBase64Bytes(()byte("CyqS6B+0nOGkMmaqyup7gQ==")).By3Des(cipher
 ```
 
 ##### Encrypt by sm3
-
 ```go
 // Encrypt by sm3 from string and output string with hex encoding
 dongle.Encrypt.FromString("hello world").BySm3().ToHexString() // 44f0061e69fa6fdfc290c494654a05dc0c053da7e5c52b84ef93a9d67d3fff88
@@ -594,8 +589,8 @@ dongle.Encrypt.FromBytes([]byte("hello world")).BySm3().ToBase64Bytes() // []byt
 ```go
 e := dongle.Encrypy.FromString("hello world").ByRsa("xxxx")
 if e.Error != nil {
-// 错误处理...
-log.Fatal(e.Error)
+    // 错误处理...
+    log.Fatal(e.Error)
 }
 fmt.Println(e.ToString())
 // Output
@@ -633,7 +628,6 @@ invalid public key, please make sure the public key is valid
 - [x] Encryption by Rc4
 - [ ] Encryption by Rc5
 - [ ] Encryption by Rc6
-- [ ] Encryption and decryption by Dsa
 - [ ] Encryption and decryption by Tea
 - [ ] Encryption and decryption by Xtea
 - [x] Encryption and decryption by Rsa with PKCS1Pem/PKCS8Pem
@@ -661,7 +655,6 @@ invalid public key, please make sure the public key is valid
 * [www.oktools.net](https://oktools.net/aes)
 
 ### Sponsors
-
 `Dongle` is a non-commercial open source project. If you want to support `Dongle`, you
 can [buy a cup of coffee](https://opencollective.com/go-carbon) for developer.
 
