@@ -616,10 +616,11 @@ invalid public key, please make sure the public key is valid
 - [ ] Rc6 加密
 - [ ] Tea 加密、解密
 - [ ] Xtea 加密、解密
-- [x] Rsa-PKCS1Pem/PKCS8Pem 加密、解密
 - [x] Aes-ECB/CBC/CTR/CFB/OFB-NoPadding/ZeroPadding/PKCS5Padding/PKCS7Padding 加密、解密
 - [x] Dde-ECB/CBC/CTR/CFB/OFB-NoPadding/ZeroPadding/PKCS5Padding/PKCS7Padding 加密、解密
 - [x] 3des-ECB/CBC/CTR/CFB/OFB-NoPadding/ZeroPadding/PKCS5Padding/PKCS7Padding 加密、解密
+- [x] Rsa-PKCS1Pem/PKCS8Pem 加密、解密
+- [ ] Ecc 加密、解密
 - [ ] Sm2 加密、解密
 - [x] Sm3 加密
 - [ ] Sm4 加密、解密
