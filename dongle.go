@@ -14,7 +14,7 @@ import (
 
 // Version current version
 // 当前版本号
-const Version = "0.1.3"
+const Version = "0.1.4"
 
 // dongle defines a dongle struct.
 // 定义 dongle 结构体
@@ -33,7 +33,10 @@ var (
 	Encrypt = newEncrypt()
 	// Decrypt returns a new decrypt instance
 	Decrypt = newDecrypt()
-	// Sign returns a new SIGN instance
+	// Sign returns a new sign instance
+	Sign = newSign()
+	// Verify returns a new verify instance
+	Verify = newVerify()
 )
 
 // converts string to byte slice without a memory allocation.
