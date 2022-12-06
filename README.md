@@ -190,7 +190,7 @@ dongle.Decode.FromBytes([]byte("www.gouguoyin.cn%3Fsex%3D%E7%94%B7%26age%3D18"))
 ```
 
 ##### Encode and decode by morse
-> The default value of rounds is `/`
+> The default value of separator is `/`
 
 ```go
 // Encode by morse from string and output string
@@ -247,7 +247,6 @@ dongle.Encrypt.FromBytes([]byte("hello world")).BySha1().ToBase64Bytes() // []by
 ```
 
 ##### Encrypt by sha3
-
 > include sha3-224, sha3-256, sha3-384, sha3-512
 
 ```go
@@ -779,7 +778,6 @@ dongle.Decrypt.FromBase64Bytes(cipherText.ToBase64Bytes()).ByRsa(pkcs8PrivateKey
 ```
 
 ##### Encrypt and decrypt by tea
-
 > Rounds must be even, the default value is 64
 
 ```go
@@ -861,7 +859,6 @@ dongle.Verify.FromRawBytes([]byte(sign.ToRawBytes()), []byte("hello world")).ByB
 ```
 
 ##### Rsa sign and verify
-
 > Hash algorithm only supports MD5, SHA1, SHA224, SHA256, SHA384, SHA512, RIPEMD160
 
 ```go
@@ -937,8 +934,8 @@ dongle.Verify.FromBase64Bytes(sign.ToBase64Bytes(), []byte("hello world")).ByRsa
 ```go
 e := dongle.Encrypt.FromString("hello world").ByRsa("xxxx")
 if e.Error != nil {
-// 错误处理...
-log.Fatal(e.Error)
+    // 错误处理...
+    log.Fatal(e.Error)
 }
 fmt.Println(e.ToString())
 // Output
