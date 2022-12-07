@@ -246,7 +246,6 @@ dongle.Encrypt.FromBytes([]byte("hello world")).BySha1().ToBase64Bytes() // []by
 ```
 
 ##### Sha3 加密
-
 > 包含 sha3-224, sha3-256, sha3-384, sha3-512
 
 ```go
@@ -760,7 +759,6 @@ dongle.Decrypt.FromBase64Bytes(cipherText.ToBase64Bytes()).ByRsa(pkcs8PrivateKey
 ```
 
 ##### Tea 加密、解密
-
 > 迭代轮次(rounds) 必须是偶数，默认是 64
 
 ```go
@@ -775,14 +773,14 @@ dongle.Encrypt.FromString("hello go").ByTea("0123456789abcdef").ToBase64String()
 dongle.Decrypt.FromBase64String("BvHlhuhmorc=").ByTea("0123456789abcdef").ToString() // hello go
 
 // 对字节切片进行 tea 加密，输出经过 hex 编码的字节切片
-dongle.Encrypt.FromBytes([]byte("hello go")).ByTea("0123456789abcdef", 64).ToHexBytes() // []byte("06f1e586e866a2b7")
+dongle.Encrypt.FromBytes([]byte("hello go")).ByTea("0123456789abcdef", 32).ToHexBytes() // []byte("4539658173a59fc2")
 // 对经过 hex 编码的字节切片进行 tea 解密，输出字节切片
-dongle.Decrypt.FromHexBytes([]byte("06f1e586e866a2b7")).ByTea("0123456789abcdef", 64).ToBytes() // []byte("hello go")
+dongle.Decrypt.FromHexBytes([]byte("4539658173a59fc2")).ByTea("4539658173a59fc2", 64).ToBytes() // []byte("hello go")
 
 // 对字节切片进行 tea 加密，输出经过 base64 编码的字节切片
-dongle.Encrypt.FromBytes([]byte("hello go")).ByTea("0123456789abcdef", 64).ToBase64Bytes() // []byte("BvHlhuhmorc=")
+dongle.Encrypt.FromBytes([]byte("hello go")).ByTea("0123456789abcdef", 32).ToBase64Bytes() // []byte("RTllgXOln8I=")
 // 对经过 base64 编码的字节切片进行 tea 解密，输出字节切片
-dongle.Decrypt.FromBase64Bytes(()byte("BvHlhuhmorc=")).ByTea("0123456789abcdef", 64).ToBytes() // []byte("hello go")
+dongle.Decrypt.FromBase64Bytes(()byte("RTllgXOln8I=")).ByTea("0123456789abcdef", 64).ToBytes() // []byte("hello go")
 ```
 
 ##### Rc4 加密、解密
@@ -850,7 +848,6 @@ dongle.Verify.FromBase64Bytes([]byte(sign.ToBase64Bytes()), []byte("hello world"
 ```
 
 ##### Rsa 签名、验签
-
 > hash 算法仅支持 MD5, SHA1, SHA224, SHA256, SHA384, SHA512, RIPEMD160
 
 ```go
