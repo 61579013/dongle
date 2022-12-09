@@ -5,6 +5,7 @@ import (
 	"encoding/base32"
 	"encoding/base64"
 	"encoding/hex"
+
 	"gitee.com/golang-module/dongle/base100"
 	"gitee.com/golang-module/dongle/base58"
 	"gitee.com/golang-module/dongle/base62"
