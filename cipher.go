@@ -5,6 +5,8 @@ import (
 	"crypto/cipher"
 )
 
+// defines cipher mode enum type
+// 定义分组模式枚举类型
 type cipherMode string
 
 // cipher mode constants
@@ -17,6 +19,8 @@ const (
 	CTR cipherMode = "ctr"
 )
 
+// defines cipher padding enum type
+// 定义填充模式枚举类型
 type cipherPadding string
 
 // cipher padding constants
