@@ -1,5 +1,7 @@
 package dongle
 
+// https://cyphr.me/ed25519_applet/ed.html
+
 import (
 	"crypto/ed25519"
 )
@@ -35,7 +37,7 @@ func (s signer) ByEd25519(privateKey interface{}, mode encodingMode) signer {
 
 // ByEd25519 verify by ed25519.
 // 通过 ed25519 公钥验签
-func (v verifier) ByEd25519(publicKey interface{}, mode encodingMode) verifier {
+func (v Verifier) ByEd25519(publicKey interface{}, mode encodingMode) Verifier {
 	if len(v.src) == 0 || v.Error != nil {
 		return v
 	}
