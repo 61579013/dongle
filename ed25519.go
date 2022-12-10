@@ -18,7 +18,7 @@ const (
 
 // ByEd25519 signs by ed25519.
 // 通过 ed25519 私钥签名
-func (s signer) ByEd25519(privateKey interface{}, mode encodingMode) signer {
+func (s Signer) ByEd25519(privateKey interface{}, mode encodingMode) Signer {
 	if len(s.src) == 0 || s.Error != nil {
 		return s
 	}
