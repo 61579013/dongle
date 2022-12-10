@@ -14,7 +14,7 @@ import (
 
 // ByHex encodes by hex.
 // 通过 hex 编码
-func (e encoder) ByHex() encoder {
+func (e Encoder) ByHex() Encoder {
 	buf := make([]byte, hex.EncodedLen(len(e.src)))
 	hex.Encode(buf, e.src)
 	e.dst = buf
@@ -38,7 +38,7 @@ func (d decoder) ByHex() decoder {
 
 // ByBase16 encodes by base16.
 // 通过 base16 编码
-func (e encoder) ByBase16() encoder {
+func (e Encoder) ByBase16() Encoder {
 	return e.ByHex()
 }
 
@@ -54,7 +54,7 @@ func (d decoder) ByBase16() decoder {
 
 // ByBase32 encodes by base32.
 // 通过 base32 编码
-func (e encoder) ByBase32() encoder {
+func (e Encoder) ByBase32() Encoder {
 	if len(e.src) == 0 {
 		return e
 	}
@@ -82,7 +82,7 @@ func (d decoder) ByBase32() decoder {
 
 // ByBase58 encodes by base58.
 // 通过 base58 编码
-func (e encoder) ByBase58() encoder {
+func (e Encoder) ByBase58() Encoder {
 	if len(e.src) == 0 {
 		return e
 	}
@@ -102,7 +102,7 @@ func (d decoder) ByBase58() decoder {
 
 // ByBase62 encodes by base91.
 // 通过 base62 编码
-func (e encoder) ByBase62() encoder {
+func (e Encoder) ByBase62() Encoder {
 	if len(e.src) == 0 {
 		return e
 	}
@@ -126,7 +126,7 @@ func (d decoder) ByBase62() decoder {
 
 // ByBase64 encodes by base64.
 // 通过 base64 编码
-func (e encoder) ByBase64() encoder {
+func (e Encoder) ByBase64() Encoder {
 	if len(e.src) == 0 {
 		return e
 	}
@@ -154,7 +154,7 @@ func (d decoder) ByBase64() decoder {
 
 // ByBase64URL encodes by base64 for url.
 // 通过 base64 对 url 编码
-func (e encoder) ByBase64URL() encoder {
+func (e Encoder) ByBase64URL() Encoder {
 	if len(e.src) == 0 {
 		return e
 	}
@@ -182,7 +182,7 @@ func (d decoder) ByBase64URL() decoder {
 
 // ByBase85 encodes by base85.
 // 通过 base85 编码
-func (e encoder) ByBase85() encoder {
+func (e Encoder) ByBase85() Encoder {
 	if len(e.src) == 0 {
 		return e
 	}
@@ -210,7 +210,7 @@ func (d decoder) ByBase85() decoder {
 
 // ByBase91 encodes by base91.
 // 通过 base91 编码
-func (e encoder) ByBase91() encoder {
+func (e Encoder) ByBase91() Encoder {
 	if len(e.src) == 0 {
 		return e
 	}
@@ -238,7 +238,7 @@ func (d decoder) ByBase91() decoder {
 
 // ByBase100 encodes by base100.
 // 通过 base100 编码
-func (e encoder) ByBase100() encoder {
+func (e Encoder) ByBase100() Encoder {
 	if len(e.src) == 0 {
 		return e
 	}
