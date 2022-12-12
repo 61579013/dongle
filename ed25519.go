@@ -1,19 +1,19 @@
 package dongle
 
-// https://cyphr.me/ed25519_applet/ed.html
-
 import (
 	"crypto/ed25519"
 )
 
+// defines encoding mode enum type.
+// 定义编码模式枚举类型
 type encodingMode string
 
 // encoding mode constants
 // 编码模式常量
 const (
-	RAW    encodingMode = "raw"
-	HEX    encodingMode = "hex"
-	BASE64 encodingMode = "base64"
+	Raw    encodingMode = "raw"
+	Hex    encodingMode = "hex"
+	Base64 encodingMode = "base64"
 )
 
 // ByEd25519 signs by ed25519.
@@ -60,14 +60,14 @@ func (v Verifier) ByEd25519(publicKey interface{}, mode encodingMode) Verifier {
 // gets the decoded key
 // 获取解码的 key
 func getDecodedKey(key []byte, mode encodingMode) (dst []byte, err error) {
-	var decode decoder
+	var decode Decoder
 	switch mode {
-	case RAW:
+	case Raw:
 		dst = key
 		return
-	case HEX:
+	case Hex:
 		decode = Decode.FromBytes(key).ByHex()
-	case BASE64:
+	case Base64:
 		decode = Decode.FromBytes(key).ByBase64()
 	}
 	if decode.Error != nil {
