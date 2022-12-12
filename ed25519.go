@@ -60,7 +60,7 @@ func (v Verifier) ByEd25519(publicKey interface{}, mode encodingMode) Verifier {
 // gets the decoded key
 // 获取解码的 key
 func getDecodedKey(key []byte, mode encodingMode) (dst []byte, err error) {
-	var decode Decoder
+	var decode decoder
 	switch mode {
 	case Raw:
 		dst = key
