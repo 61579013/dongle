@@ -24,7 +24,7 @@ func (e Encoder) ByMorse(separator ...string) Encoder {
 
 // ByMorse decodes by morse.
 // 通过 morse 解码
-func (d decoder) ByMorse(separator ...string) decoder {
+func (d Decoder) ByMorse(separator ...string) Decoder {
 	if len(d.src) == 0 || d.Error != nil {
 		return d
 	}

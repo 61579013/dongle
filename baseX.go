@@ -23,7 +23,7 @@ func (e Encoder) ByHex() Encoder {
 
 // ByHex decodes by hex.
 // 通过 hex 解码
-func (d decoder) ByHex() decoder {
+func (d Decoder) ByHex() Decoder {
 	buf := make([]byte, hex.DecodedLen(len(d.src)))
 	n, err := hex.Decode(buf, d.src)
 	if n > 0 {
@@ -44,7 +44,7 @@ func (e Encoder) ByBase16() Encoder {
 
 // ByBase16 decodes by base16.
 // 通过 base16 解码
-func (d decoder) ByBase16() decoder {
+func (d Decoder) ByBase16() Decoder {
 	if d.ByHex().Error != nil {
 		d.Error = invalidDecodingError("base16")
 		return d
@@ -66,7 +66,7 @@ func (e Encoder) ByBase32() Encoder {
 
 // ByBase32 decodes by base32.
 // 通过 base32 解码
-func (d decoder) ByBase32() decoder {
+func (d Decoder) ByBase32() Decoder {
 	if len(d.src) == 0 {
 		return d
 	}
@@ -92,7 +92,7 @@ func (e Encoder) ByBase58() Encoder {
 
 // ByBase58 decodes by base58.
 // 通过 base58 解码
-func (d decoder) ByBase58() decoder {
+func (d Decoder) ByBase58() Decoder {
 	if len(d.src) == 0 {
 		return d
 	}
@@ -112,7 +112,7 @@ func (e Encoder) ByBase62() Encoder {
 
 // ByBase62 decodes by base91.
 // 通过 base62 解码
-func (d decoder) ByBase62() decoder {
+func (d Decoder) ByBase62() Decoder {
 	if len(d.src) == 0 {
 		return d
 	}
@@ -138,7 +138,7 @@ func (e Encoder) ByBase64() Encoder {
 
 // ByBase64 decodes by base64.
 // 通过 base64 解码
-func (d decoder) ByBase64() decoder {
+func (d Decoder) ByBase64() Decoder {
 	if len(d.src) == 0 {
 		return d
 	}
@@ -166,7 +166,7 @@ func (e Encoder) ByBase64URL() Encoder {
 
 // ByBase64URL decodes by base64 for url.
 // 通过 base64 对 url 解码
-func (d decoder) ByBase64URL() decoder {
+func (d Decoder) ByBase64URL() Decoder {
 	if len(d.src) == 0 {
 		return d
 	}
@@ -194,7 +194,7 @@ func (e Encoder) ByBase85() Encoder {
 
 // ByBase85 decodes by base85.
 // 通过 base85 解码
-func (d decoder) ByBase85() decoder {
+func (d Decoder) ByBase85() Decoder {
 	if len(d.src) == 0 {
 		return d
 	}
@@ -222,7 +222,7 @@ func (e Encoder) ByBase91() Encoder {
 
 // ByBase91 decodes by base91.
 // 通过 base91 解码
-func (d decoder) ByBase91() decoder {
+func (d Decoder) ByBase91() Decoder {
 	if len(d.src) == 0 {
 		return d
 	}
@@ -248,7 +248,7 @@ func (e Encoder) ByBase100() Encoder {
 
 // ByBase100 decodes by base100.
 // 通过 base100 解码
-func (d decoder) ByBase100() decoder {
+func (d Decoder) ByBase100() Decoder {
 	if len(d.src) == 0 {
 		return d
 	}
