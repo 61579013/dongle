@@ -6,9 +6,9 @@ type Signer struct {
 	dongle
 }
 
-// NewSigner returns a new Signer instance.
+// newSigner returns a new Signer instance.
 // 初始化 Signer 结构体
-func NewSigner() Signer {
+func newSigner() Signer {
 	return Signer{}
 }
 
@@ -26,7 +26,7 @@ func (s Signer) FromBytes(message []byte) Signer {
 	return s
 }
 
-// String implements the interface Stringer for Signer struct.
+// String implements Stringer interface for Signer struct.
 // 实现 Stringer 接口
 func (s Signer) String() string {
 	return s.ToRawString()
