@@ -1,6 +1,6 @@
 // @Package dongle
 // @Description a simple, semantic and developer-friendly golang package for encoding&decoding, encryption&decryption and signature&verification
-// @Page github.com/golang-module/dongle
+// @Page gitee.com/golang-module/dongle
 // @Developer gouguoyin
 // @Blog www.gouguoyin.com
 // @Email contact@gouguoyin.com
@@ -14,7 +14,7 @@ import (
 
 // Version current version
 // 当前版本号
-const Version = "0.2.2"
+const Version = "0.2.3"
 
 // dongle defines a dongle struct.
 // 定义 dongle 结构体
