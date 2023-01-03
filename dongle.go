@@ -1,6 +1,6 @@
 // @Package dongle
 // @Description a simple, semantic and developer-friendly golang package for encoding&decoding, encryption&decryption and signature&verification
-// @Page gitee.com/golang-module/dongle
+// @Page github.com/golang-module/dongle
 // @Developer gouguoyin
 // @Blog www.gouguoyin.com
 // @Email contact@gouguoyin.com
@@ -78,4 +78,19 @@ func interface2bytes(i interface{}) (b []byte) {
 		b = v
 	}
 	return
+}
+
+// stringSplit split the string by the specified size
+// 按照指定长度分割字符串
+func stringSplit(buf []byte, size int) [][]byte {
+	var chunk []byte
+	chunks := make([][]byte, 0, len(buf)/size+1)
+	for len(buf) >= size {
+		chunk, buf = buf[:size], buf[size:]
+		chunks = append(chunks, chunk)
+	}
+	if len(buf) > 0 {
+		chunks = append(chunks, buf[:])
+	}
+	return chunks
 }
