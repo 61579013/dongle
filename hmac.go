@@ -9,7 +9,7 @@ import (
 	"hash"
 
 	"gitee.com/golang-module/dongle/md2"
-	"github.com/tjfoc/gmsm/sm3"
+	"github.com/emmansun/gmsm/sm3"
 	"golang.org/x/crypto/md4"
 	"golang.org/x/crypto/ripemd160"
 	"golang.org/x/crypto/sha3"
