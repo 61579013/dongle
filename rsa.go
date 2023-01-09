@@ -3,7 +3,7 @@ package dongle
 import (
 	"crypto"
 
-	"gitee.com/golang-package/dongle/rsa"
+	"gitee.com/golang-module/dongle/rsa"
 )
 
 // defines rsa hash enum type.

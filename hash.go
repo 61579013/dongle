@@ -6,7 +6,7 @@ import (
 	"crypto/sha256"
 	"crypto/sha512"
 
-	"gitee.com/golang-package/dongle/md2"
+	"gitee.com/golang-module/dongle/md2"
 	"golang.org/x/crypto/blake2b"
 	"golang.org/x/crypto/blake2s"
 	"golang.org/x/crypto/md4"
